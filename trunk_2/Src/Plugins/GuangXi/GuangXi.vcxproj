@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{55198BB1-4B4F-45B0-82EB-C772F109B585}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>../../../build/$(Configuration)/plugin/$(ProjectName)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>../../../build/$(Configuration)/plugin/$(ProjectName)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(WXWIN)/include;$(WXADDITIONS)/include;$(WXWIN)/contrib/include;$(GRS_SDK);$(GRS_SDK)/interface;$(GRS_SDK)/include;$(GRS_SDK)/Include\MYSQL;$(GRS_SDK)/include/pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>wx_pch.h; $(WXWIN)/include/msvc/wx/setup.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile>wx_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)/$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;STRICT;__WXMSW__;__WX__;_DEBUG;__WXDEBUG__;_WINDOWS;TIXML_USE_TICPP;wxUSE_UNICODE;WXUSINGDLL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;rpcrt4.lib;winmm.lib;wsock32.lib;LibWRISFramework.lib;version.lib;tinyxml++.lib;pthreadVC2.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(GRS_SDK)/include/targetsxs.h;$(WXWIN)/lib/vc_dll;$(WXADDITIONS)/lib/vc_dll;$(GRS_SDK)/lib/$(ConfigurationName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir); $(WXWIN)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(WXWIN)/include;$(WXADDITIONS)/include;$(WXWIN)/contrib/include;$(GRS_SDK);$(GRS_SDK)/interface;$(GRS_SDK)/include;$(GRS_SDK)/Include\MYSQL;$(GRS_SDK)/include/pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>wx_pch.h; $(WXWIN)/include/msvc/wx/setup.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile>wx_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)/$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;STRICT;__WXMSW__;__WX__;NDEBUG;_WINDOWS;TIXML_USE_TICPP;wxUSE_UNICODE;WXUSINGDLL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MinSpace</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>comctl32.lib;rpcrt4.lib;winmm.lib;wsock32.lib;LibWRISFramework.lib;version.lib;tinyxml++.lib;pthreadVC2.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(GRS_SDK)/include/targetsxs.h;$(WXWIN)/lib/vc_dll;$(WXADDITIONS)/lib/vc_dll;$(GRS_SDK)/lib/$(ConfigurationName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir); $(WXWIN)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Message>增加编译版本号 . . .</Message>
+      <Command>ChangeRev /s$(ProjectDir) /f$(ProjectDir)version.cpp /r$(ProjectDir)$(ProjectName).rc</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Interface\GuangXi\GuangXi_I.h" />
+    <ClInclude Include="AlarmFileCheck.h" />
+    <ClInclude Include="BaseDataCheck.h" />
+    <ClInclude Include="FileGenerationCheck.h" />
+    <ClInclude Include="FTPBaseDataCheck.h" />
+    <ClInclude Include="FTPCheck.h" />
+    <ClInclude Include="FTPFileAlarm.h" />
+    <ClInclude Include="FTPProductDataCheck.h" />
+    <ClInclude Include="FTPStateDataCheck.h" />
+    <ClInclude Include="GuangXiEditor.h" />
+    <ClInclude Include="GuangXiMain.h" />
+    <ClInclude Include="GuangXiMenu.h" />
+    <ClInclude Include="GuangXiPanel.h" />
+    <ClInclude Include="GuangXiSet.h" />
+    <ClInclude Include="GuangXiToolBar.h" />
+    <ClInclude Include="GuangXi_gui.h" />
+    <ClInclude Include="IFTPCheck.h" />
+    <ClInclude Include="mysqldatabase.h" />
+    <ClInclude Include="Pintucheck.h" />
+    <ClInclude Include="PintuFileAlarm.h" />
+    <ClInclude Include="ProductCheck.h" />
+    <ClInclude Include="ProductFileAlarm.h" />
+    <ClInclude Include="pugiconfig.hpp" />
+    <ClInclude Include="pugixml.hpp" />
+    <ClInclude Include="RadarStatus.h" />
+    <ClInclude Include="RadarStatusAlarm.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SoftwareCheck.h" />
+    <ClInclude Include="stringresource.h" />
+    <ClInclude Include="type.h" />
+    <ClInclude Include="wx_pch.h" />
+    <ClInclude Include="ZhuangtaiCheck.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc.txt" />
+    <None Include="GuangXi.fbp" />
+    <None Include="version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="GuangXi.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GuangXi.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlarmFileCheck.cpp" />
+    <ClCompile Include="BaseDataCheck.cpp" />
+    <ClCompile Include="FileGenerationCheck.cpp" />
+    <ClCompile Include="FTPBaseDataCheck.cpp" />
+    <ClCompile Include="FTPCheck.cpp" />
+    <ClCompile Include="FTPFileAlarm.cpp" />
+    <ClCompile Include="FTPProductDataCheck.cpp" />
+    <ClCompile Include="FTPStateDataCheck.cpp" />
+    <ClCompile Include="GuangXiMain.cpp" />
+    <ClCompile Include="GuangXiPanel.cpp" />
+    <ClCompile Include="GuangXiPlug.cpp" />
+    <ClCompile Include="GuangXiSet.cpp" />
+    <ClCompile Include="GuangXi_gui.cpp" />
+    <ClCompile Include="MysqlDatabase.cpp" />
+    <ClCompile Include="Pintucheck.cpp" />
+    <ClCompile Include="PintuFileAlarm.cpp" />
+    <ClCompile Include="ProductCheck.cpp" />
+    <ClCompile Include="ProductFileAlarm.cpp" />
+    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="RadarStatus.cpp" />
+    <ClCompile Include="RadarStatusAlarm.cpp" />
+    <ClCompile Include="SoftwareCheck.cpp" />
+    <ClCompile Include="version.cpp" />
+    <ClCompile Include="ZhuangtaiCheck.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

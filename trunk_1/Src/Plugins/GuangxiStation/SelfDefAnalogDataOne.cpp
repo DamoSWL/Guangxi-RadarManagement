@@ -1,0 +1,293 @@
+#include "SelfDefAnalogDataOne.h"
+
+
+static const int CMDTIMERID = 221;
+static const int WRITETIMERID = 225; 
+
+
+BEGIN_EVENT_TABLE(CSelfDefAnalogDataOne,wxEvtHandler)
+    EVT_TIMER(WRITETIMERID,CSelfDefAnalogDataOne::onwriteDataTimeout)
+    EVT_TIMER(CMDTIMERID,CSelfDefAnalogDataOne::onCmdTimeout)
+END_EVENT_TABLE()
+
+CSelfDefAnalogDataOne::CSelfDefAnalogDataOne(void):
+m_cmdTimer(this,CMDTIMERID),
+m_writeDataTimer(this,WRITETIMERID)
+{
+}
+
+
+CSelfDefAnalogDataOne::~CSelfDefAnalogDataOne(void)
+{
+}
+
+
+void CSelfDefAnalogDataOne::setID(const std::set<UINT>& id)
+{
+	m_IDSet = id;
+	
+	for(auto index = m_IDSet.cbegin(); index != m_IDSet.cend(); index++)
+	{
+		m_newUPSDataFlag[*index] = false;
+	}
+}
+
+void CSelfDefAnalogDataOne::setIPAddress(const std::string& IPStr)
+{
+	m_IPAddress = IPStr;
+}
+
+int CSelfDefAnalogDataOne::processData(void *pHandle, const char *pData, UINT Len)
+{
+	IProcess* self = static_cast<IProcess*>(pHandle);
+	if(self)
+	{
+		self->processCmd(pData,Len);
+	}
+	return 0;
+}
+
+void CSelfDefAnalogDataOne::processEvent(void *pHandle, int Opt, char *pData /*= nullptr*/, UINT Len /*= 0*/)
+{
+
+}
+
+void CSelfDefAnalogDataOne::startWriteDataTimer()
+{
+	if(!m_writeDataTimer.IsRunning())
+	{
+		m_writeDataTimer.Start(WTIMEINTERVAL,wxTIMER_ONE_SHOT);
+	}
+}
+
+void CSelfDefAnalogDataOne::sendUPSCmd(UINT id)
+{
+	UCHAR UPSCmd[18] = {'\0'};
+	UPSCmd[0] = UPSSOI;
+	UPSCmd[1] = GetPlug()->HexToASCII(0x11).first;
+	UPSCmd[2] = GetPlug()->HexToASCII(0x11).second;
+
+	for(auto id = m_IDSet.cbegin(); id != m_IDSet.cend(); id++)
+	{
+		UPSCmd[3] = GetPlug()->HexToASCII(*id).first;
+		UPSCmd[4] = GetPlug()->HexToASCII(*id).second;
+		UPSCmd[5] = GetPlug()->HexToASCII(0x2A).first;
+		UPSCmd[6] = GetPlug()->HexToASCII(0x2A).second;
+		UPSCmd[7] = GetPlug()->HexToASCII(0xE1).first;
+		UPSCmd[8] = GetPlug()->HexToASCII(0xE1).second;
+		UPSCmd[9] = 0x30;
+		UPSCmd[10] = 0x30;
+		UPSCmd[11] = 0x30;
+		UPSCmd[12] = 0x30;
+
+		auto checkSum = 0;
+		for(auto index = 1; index <= 12; index++)
+		{
+			checkSum += UPSCmd[index];
+		}
+
+		checkSum %= 0x10000;
+		checkSum = ~checkSum + 1;
+
+		UCHAR checkSumUpperPart = checkSum >> 8;
+		UCHAR checkSumLowerPart = checkSum & 0x00FF;
+
+		UPSCmd[13] = GetPlug()->HexToASCII(checkSumUpperPart).first;
+		UPSCmd[14] = GetPlug()->HexToASCII(checkSumUpperPart).second;
+		UPSCmd[15] = GetPlug()->HexToASCII(checkSumLowerPart).first;
+		UPSCmd[16] = GetPlug()->HexToASCII(checkSumLowerPart).second;
+		UPSCmd[17] = UPSEOI;
+
+		GetPlug()->sendCmd(UPSExtendAnalogDataOne,(const char*)&UPSCmd,18,m_IPAddress.c_str(),UPSPORT);
+
+		//GetPlug()->AddLog(LOG_TYPE_MESSAGE,"send ups selfdef data one");
+	}
+}
+
+void CSelfDefAnalogDataOne::onwriteDataTimeout(wxTimerEvent& event)
+{
+    m_cmdTimer.Stop();
+	writeToDataBase();
+	
+	m_cmdTimer.Start(LTIMEINTERVAL);
+	for(auto item = m_newUPSDataFlag.begin(); item != m_newUPSDataFlag.end(); item++)
+	{
+		item->second = false;
+	}
+}
+
+void CSelfDefAnalogDataOne::onCmdTimeout(wxTimerEvent& event)
+{
+	m_cmdTimer.Stop();
+	
+	for(auto item = m_newUPSDataFlag.cbegin(); item != m_newUPSDataFlag.cend(); item++)
+	{
+		if(!item->second)
+		{
+			sendUPSCmd(item->first);
+		}
+		::wxMilliSleep(200);
+	}
+
+	m_cmdTimer.Start(STIMEINTERVAL);
+	startWriteDataTimer();
+}
+
+bool CSelfDefAnalogDataOne::writeToDataBase()
+{
+	wxString sqlSentence = wxT("INSERT INTO ups_info (radarcd, \
+		updateTime,\
+		equipcode, \
+		m1_input_voltage_ab, \
+		m1_input_voltage_bc, \
+		m1_input_voltage_ca, \
+		m1_input_electricity_a, \
+		m1_input_electricity_b, \
+		m1_input_electricity_c, \
+		m1_input_frequency, \
+		m1_all_input_power_divisor, \
+		m1_bypass_voltage_a, \
+		m1_bypass_voltage_b, \
+		m1_bypass_voltage_c, \
+		m1_bypass_frequency, \
+		m1_battery_current) VALUES");
+	wxString sqlError;
+	MySqlDatabase* pDataBase = GetPlug()->getDatabase();
+	wxMutex* sqlLocker = GetPlug()->getSqlMutex();
+	wxMutexLocker locker(*sqlLocker);
+
+	if(pDataBase)
+	{
+		try
+		{
+		
+			for(auto id = m_IDSet.cbegin(); id != m_IDSet.cend(); id++)
+			{
+				if(m_newUPSDataFlag[*id])
+				{
+					auto sqlSentenceSingle = sqlSentence;
+					sqlSentenceSingle.Append(wxString::Format(wxT("('%s', "),wxString(GetPlug()->getSiteInfo().c_str(),wxConvLocal)));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%d, "),::wxGetUTCTime()));
+					sqlSentenceSingle.Append(wxString::Format(wxT("'%s', "),wxT("E1")));
+
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_voltage_ab));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_voltage_bc));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_voltage_ca));
+
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_electricity_a));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_electricity_b));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_electricity_c));
+
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_input_frequency));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_all_input_power_divisor));
+
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_bypass_voltage_a));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_bypass_voltage_b));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_bypass_voltage_c));
+
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f, "),m_UPSParam[*id].m1_bypass_frequency));
+					sqlSentenceSingle.Append(wxString::Format(wxT("%f)"),m_UPSParam[*id].m1_battery_current));
+
+					if(!pDataBase->ExecuteNoQuery(sqlSentenceSingle,sqlError))
+					{
+						throw sqlError;
+					}
+
+				}
+			}
+
+			return true;
+		}
+		catch (wxString& error)
+		{
+			GetPlug()->AddLog(LOG_TYPE_MESSAGE,__FUNCTION__);
+			GetPlug()->AddLog(LOG_TYPE_ERROR,error.mb_str(wxConvLocal));
+		}
+	}
+
+	return false;
+}
+
+bool CSelfDefAnalogDataOne::isCheckSumValid(const char* pData,UINT Len)
+{
+	if(pData)
+	{
+		auto Checksum = 0;
+		for(UINT index = 1; index <= Len - 1 - 5; index++)
+		{
+			Checksum += (UCHAR)pData[index];
+		}
+
+		Checksum %= 0x10000;
+		Checksum = ~Checksum + 1;
+		UCHAR checkSumUpperPart = Checksum >> 8;
+		UCHAR checkSumLowerPart = Checksum & 0x00FF;
+
+		UCHAR checkSumUpperPartInData = GetPlug()->ASCIIToHex(std::make_pair(pData[Len - 1 - 4], pData[Len - 1 - 3]));
+		UCHAR checkSumLowerPartInData = GetPlug()->ASCIIToHex(std::make_pair(pData[Len -1 - 2],pData[Len - 1 - 1]));
+		if((checkSumUpperPart == checkSumUpperPartInData) && (checkSumLowerPart == checkSumLowerPartInData))
+		{
+			return true;
+		}
+
+	}
+
+	return false;
+}
+
+void CSelfDefAnalogDataOne::processCmd(const char* pData,unsigned int len)
+{
+	if(((UCHAR)pData[0] == UPSSOI) && ((UCHAR)pData[len -1] == UPSEOI) && (len >= 126))
+	{
+		if(isCheckSumValid(pData,len))
+		{
+			if(GetPlug()->ASCIIToHex(std::make_pair(pData[1],pData[2])) == 0x11)
+			{
+				auto id = GetPlug()->ASCIIToHex(std::make_pair(pData[3],pData[4]));
+				if(m_IDSet.find(id) != m_IDSet.end())
+				{
+					m_newUPSDataFlag[id] = true;
+					if(GetPlug()->ASCIIToHex(std::make_pair(pData[5],pData[6])) == 0x2A)
+					{
+						if(GetPlug()->ASCIIToHex(std::make_pair(pData[7],pData[8])) == 0x00)
+						{
+							m_UPSParam[id].m1_input_voltage_ab = GetPlug()->UCHARToFloat((PUCHAR)(pData + 17));
+							m_UPSParam[id].m1_input_voltage_bc = GetPlug()->UCHARToFloat((PUCHAR)(pData + 25));
+							m_UPSParam[id].m1_input_voltage_ca = GetPlug()->UCHARToFloat((PUCHAR)(pData + 33));
+							m_UPSParam[id].m1_input_electricity_a = GetPlug()->UCHARToFloat((PUCHAR)(pData + 41));
+							m_UPSParam[id].m1_input_electricity_b = GetPlug()->UCHARToFloat((PUCHAR)(pData + 49));
+							m_UPSParam[id].m1_input_electricity_c = GetPlug()->UCHARToFloat((PUCHAR)(pData + 57));
+							m_UPSParam[id].m1_input_frequency = GetPlug()->UCHARToFloat((PUCHAR)(pData + 65));
+							m_UPSParam[id].m1_all_input_power_divisor = GetPlug()->UCHARToFloat((PUCHAR)(pData + 73));
+							m_UPSParam[id].m1_bypass_voltage_a = GetPlug()->UCHARToFloat((PUCHAR)(pData + 81));
+							m_UPSParam[id].m1_bypass_voltage_b = GetPlug()->UCHARToFloat((PUCHAR)(pData + 89));
+							m_UPSParam[id].m1_bypass_voltage_c = GetPlug()->UCHARToFloat((PUCHAR)(pData + 97));
+							m_UPSParam[id].m1_bypass_frequency = GetPlug()->UCHARToFloat((PUCHAR)(pData + 105));
+							m_UPSParam[id].m1_battery_current = GetPlug()->UCHARToFloat((PUCHAR)(pData + 113));
+	
+						}
+						else
+						{
+							GetPlug()->AddLog(LOG_TYPE_ERROR,"ups self data one wrong RTN");
+						}
+			
+					}
+	
+				}
+			}
+		
+		}
+		
+	}
+}
+
+void CSelfDefAnalogDataOne::startTimer(int interval)
+{
+	m_cmdTimer.Start(interval);
+}
+
+void CSelfDefAnalogDataOne::stopTimer()
+{
+	m_cmdTimer.Stop();
+	m_writeDataTimer.Stop();
+}

@@ -1,0 +1,15 @@
+﻿/*! @defgroup GuangXiGroup GuangXi插件
+*  本组为GuangXi系统
+*  \ingroup PluginGroup
+*  @{
+*/
+/*! @} */
+
+/*! @defgroup GuangXiInterface GuangXi插件接口
+*  本组为GuangXi系统的接口
+*  \ingroup GuangXiGroup
+*  @{
+*/
+/*! @} */
+
+

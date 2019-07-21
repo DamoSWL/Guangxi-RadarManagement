@@ -1,0 +1,15 @@
+﻿/*! @defgroup GuangxiStationGroup GuangxiStation插件
+*  本组为GuangxiStation系统
+*  \ingroup PluginGroup
+*  @{
+*/
+/*! @} */
+
+/*! @defgroup GuangxiStationInterface GuangxiStation插件接口
+*  本组为GuangxiStation系统的接口
+*  \ingroup GuangxiStationGroup
+*  @{
+*/
+/*! @} */
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<Config>
+    <MainRev value="1.0" />
+	<SvnRev value="$WCREV$" />
+	<Build value="$WCNOW$" />
+	<Commit value="$WCDATE$" />
+	<App value="WR-X100 Radar Product Terminal" />
+</Config>

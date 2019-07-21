@@ -1,0 +1,70 @@
+﻿生成启动时间为 2018/5/3 14:02:57。
+     1>项目“F:\GuangXi_Server\Src\Plugins\GuangXi\GuangXi.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\GuangXi.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\wxWidgets2.8/include /ID:\wxWidgets2.8\additions/include /ID:\wxWidgets2.8/contrib/include /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/interface" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/Include\MYSQL" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/pthread" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D STRICT /D __WXMSW__ /D __WX__ /D _DEBUG /D __WXDEBUG__ /D _WINDOWS /D TIXML_USE_TICPP /D wxUSE_UNICODE /D WXUSINGDLL /D _CRT_SECURE_NO_DEPRECATE /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx_pch.h" /Fp"Debug\/GuangXi.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /FIwx_pch.h /FID:\wxWidgets2.8/include/msvc/wx/setup.h /analyze- /errorReport:prompt AlarmFileCheck.cpp BaseDataCheck.cpp FTPProductDataCheck.cpp FTPStateDataCheck.cpp GuangXiMain.cpp GuangXiPlug.cpp GuangXiSet.cpp GuangXi_gui.cpp MysqlDatabase.cpp PintuFileAlarm.cpp Pintucheck.cpp ProductCheck.cpp ProductFileAlarm.cpp RadarStatus.cpp RadarStatusAlarm.cpp SoftwareCheck.cpp ZhuangtaiCheck.cpp pugixml.cpp version.cpp
+         version.cpp
+         pugixml.cpp
+         ZhuangtaiCheck.cpp
+         SoftwareCheck.cpp
+         RadarStatusAlarm.cpp
+         RadarStatus.cpp
+         ProductFileAlarm.cpp
+         ProductCheck.cpp
+         Pintucheck.cpp
+         PintuFileAlarm.cpp
+         MysqlDatabase.cpp
+         GuangXi_gui.cpp
+         GuangXiSet.cpp
+         GuangXiPlug.cpp
+         GuangXiMain.cpp
+         FTPStateDataCheck.cpp
+         FTPProductDataCheck.cpp
+         BaseDataCheck.cpp
+         AlarmFileCheck.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../../../build/Debug/plugin/GuangXi\GuangXi.dll" /INCREMENTAL /NOLOGO /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/targetsxs.h" /LIBPATH:D:\wxWidgets2.8/lib/vc_dll /LIBPATH:D:\wxWidgets2.8\additions/lib/vc_dll /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/lib/Debug" comctl32.lib rpcrt4.lib winmm.lib wsock32.lib LibWRISFramework.lib version.lib tinyxml++.lib pthreadVC2.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\GuangXi.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\GuangXi_Server\build\Debug\plugin\GuangXi\GuangXi.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../../../build/Debug/plugin/GuangXi\GuangXi.lib" /MACHINE:X86 /DLL Debug\GuangXi.res
+         Debug\GuangXi.dll.embed.manifest.res
+         Debug\AlarmFileCheck.obj
+         Debug\BaseDataCheck.obj
+         Debug\FileGenerationCheck.obj
+         Debug\FTPBaseDataCheck.obj
+         Debug\FTPCheck.obj
+         Debug\FTPFileAlarm.obj
+         Debug\FTPProductDataCheck.obj
+         Debug\FTPStateDataCheck.obj
+         Debug\GuangXiMain.obj
+         Debug\GuangXiPanel.obj
+         Debug\GuangXiPlug.obj
+         Debug\GuangXiSet.obj
+         Debug\GuangXi_gui.obj
+         Debug\MysqlDatabase.obj
+         Debug\Pintucheck.obj
+         Debug\PintuFileAlarm.obj
+         Debug\ProductCheck.obj
+         Debug\ProductFileAlarm.obj
+         Debug\pugixml.obj
+         Debug\RadarStatus.obj
+         Debug\RadarStatusAlarm.obj
+         Debug\SoftwareCheck.obj
+         Debug\version.obj
+         Debug\ZhuangtaiCheck.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\GuangXi.dll.embed.manifest" /manifest GuangXi.exe.manifest Debug\GuangXi.dll.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         GuangXi.vcxproj -> F:\GuangXi_Server\Src\Plugins\GuangXi\../../../build/Debug/plugin/GuangXi\GuangXi.dll
+       FinalizeBuildStatus:
+         正在删除文件“Debug\GuangXi.unsuccessfulbuild”。
+         正在对“Debug\GuangXi.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\GuangXi_Server\Src\Plugins\GuangXi\GuangXi.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.90

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+	<database>
+		<hostname>localhost</hostname>
+		<user>root</user>
+		<password>cdyw</password>
+		<databasename>radar_monitor_db_20180226</databasename>
+	</database>
+	<fileDir>
+		<JishujuDir>F:\guangxiFile\南宁\data</JishujuDir>
+		<ProductDir>F:\guangxiFile\南宁\data</ProductDir>
+		<ZhuangtaiDir>F:\guangxiFile\南宁\data</ZhuangtaiDir>
+		<PingtuDir>F:\guangxiFile\南宁\data</PingtuDir>
+		<BaojingDir>F:\guangxiFile\benn\RADA\ALM</BaojingDir>
+	</fileDir>
+	<updateTime>
+		<baseDataTime>0</baseDataTime>
+		<productTime>1518141230</productTime>
+		<zhuangtaiTime>1518141264</zhuangtaiTime>
+		<pintuTime>1518138182</pintuTime>
+		<alarmTime>1515400364</alarmTime>
+	</updateTime>
+	<FtpDir Dir_1="F:\wxDLL" Dir_2="F:\CmdStatusClient" Dir_3="G:\Project\upload\Win32\Release">
+		<baseDataTime>1521020932</baseDataTime>
+		<productTime>1518142138</productTime>
+		<zhuangtaiTime>1524895530</zhuangtaiTime>
+		<pintuTime>0</pintuTime>
+	</FtpDir>
+</config>

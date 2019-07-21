@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<MenuConfig>    <!--Show=”1“加载主菜单，”0“不加载，Order为主菜单加载顺序0~19之间-->
+    <File Name="文件(&amp;F)" tooltip="" Show="1" Order="0">   <!--“文件”菜单-->
+		<File_Log Name="打开日志(&amp;O)" tooltip="打开日志文件" Show="1" />	<!--“打开日志”菜单-->
+		<File_Quit Name="退出(&amp;Q)" tooltip="退出应用程序" Show="1" />	<!--“退出”菜单-->
+    </File>	
+	<Edit Name="编辑(&amp;E)" tooltip="编辑" Show="0" Order="0">    <!--“编辑”菜单-->    
+    </Edit>
+	
+	<View Name="视图(&amp;V)" tooltip="视图" Show="1" Order="1">     <!--“视图”菜单-->
+		<View_LockLayout Name="锁定布局(&amp;L)" tooltip="锁定布局" Show="1" />	<!--“锁定布局”菜单-->
+		<View_DefaultLayout Name="恢复默认布局(&amp;R)" tooltip="恢复默认布局" Show="1" />	<!--“恢复默认布局”菜单-->
+		<View_SaveDefaultLayout Name="保存为默认布局(&amp;D)" tooltip="保存为默认布局" Show="1" /><!--“保存为默认布局”菜单-->
+    </View>
+	
+	<Debug Name="调试(&amp;D)" tooltip="调试" Show="0" Order="3">    <!--“调试”菜单-->    
+    </Debug>
+	
+	<RadarControl Name="雷达控制(&amp;C)" tooltip="雷达控制" Show="0" Order="4">		<!--“雷达控制”菜单-->   
+	</RadarControl>
+	
+	<Tool Name="工具(&amp;T)" tooltip="工具" Show="1" Order="5">     <!--“工具”菜单-->   
+		<Tool_PluginAdmin Name="插件管理(A)" tooltip="插件管理" Show="1"/>		<!--“插件管理”菜单-->
+    </Tool>
+	
+	<Function Name="功能(&amp;X)" tooltip="功能" Show="0" Order="6"> <!--“功能”菜单-->       
+    </Function>
+	
+	<SetConfig Name="设置(&amp;S)" tooltip="设置" Show="1" Order="7">  <!--“设置”菜单-->   
+		<Set_Log Name="日志信息(&amp;L)" tooltip="日志信息设置" Show="1" />		<!--“日志设置”菜单-->
+		<Set_Berth Name="停靠主题(&amp;D)" tooltip="停靠主题设置" Show="1" />		<!--“停靠主题设置”菜单-->
+		<Set_Fastkeybord Name="快捷热键(&amp;F)" tooltip="快捷键设置" Show="8" />	<!--“快捷键设置”菜单-->
+		<Set_Other Name="其它信息(&amp;O)" tooltip="其它设置" Show="1" />		<!--“其它设置”菜单-->
+	</SetConfig>
+	
+	<Analyze Name="分析(&amp;A)" tooltip="分析" Show="0" Order="9">	<!--“分析”菜单-->
+	</Analyze>
+	
+	<Windows Name="窗口(&amp;W)" tooltip="" Show="1" Order="2">	<!--“窗口”菜单-->
+		<Windows_Log Name="日志窗口(&amp;L)" tooltip="显示/隐藏日志窗口" Show="1" />				<!--“日志显示”菜单-->
+		<Windows_DefaultWindows Name="显示默认窗口(&amp;D)" tooltip="显示默认窗口" Show="1" />		<!--“显示默认窗口”菜单-->
+		<Windows_AllWindows Name="显示所有窗口(&amp;A)" tooltip="显示所有窗口" Show="1" />			<!--“显示所有窗口”菜单-->
+	</Windows>
+	
+	<Help Name="帮助(&amp;H)" tooltip="" Show="1" Order="11">		<!--“帮助”菜单-->
+		<Help_Help Name="内容(&amp;H)" tooltip="程序帮助" Show="1" />					<!--“帮助”菜单-->
+		<Help_About Name="关于(&amp;A)" tooltip="显示程序概述等信息" Show="1" />					<!--“关于”菜单-->
+	</Help>
+</MenuConfig>

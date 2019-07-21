@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<Plugins path="">
+    <Plugin index="0">
+        <name>GuangXi</name>
+        <guid>{16C4B2CF-17BF-4ED7-85AF-681E3B4D0411}</guid>
+        <model>GuangXi.dll</model>
+        <path></path>
+        <active>1</active>
+    </Plugin>
+</Plugins>

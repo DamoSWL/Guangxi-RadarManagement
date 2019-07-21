@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{14101ade-9d3a-4cc5-b24a-97c25dfeb5f0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c7427784-9426-4d30-bd77-f17852dc97ac}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="wxFormBuilder Files">
+      <UniqueIdentifier>{265ccf67-a950-4469-ac5c-ec81823ccb38}</UniqueIdentifier>
+      <Extensions>fbp</Extensions>
+    </Filter>
+    <Filter Include="Interface Files">
+      <UniqueIdentifier>{d28a02a3-e90d-40e2-8f01-a30110607bb2}</UniqueIdentifier>
+      <Extensions>h;i</Extensions>
+    </Filter>
+    <Filter Include="Source Files\FTPCheck">
+      <UniqueIdentifier>{a1e76c82-9df4-413c-aa23-32e80e7e705e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FileGenerationCheck">
+      <UniqueIdentifier>{ab14ee5f-5554-47bc-8a75-befef73b2c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SoftwareCheck">
+      <UniqueIdentifier>{3d882f99-df03-4830-a5e0-42224af7a824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RadarSatus">
+      <UniqueIdentifier>{88bc8d8f-8240-4a4e-a68a-989b25fa7d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Alarm">
+      <UniqueIdentifier>{95de59b9-a8f2-44ef-8faf-b62767e70347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0e6c4d64-5b4e-4a6e-9b15-b4becab039b0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FTPCheck">
+      <UniqueIdentifier>{19460e53-bdc9-4e41-97a4-f44aa35de48d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AlarmCheck">
+      <UniqueIdentifier>{cecd96be-d4cf-4a57-a073-f52e46b0218b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FileGenerationCheck">
+      <UniqueIdentifier>{1fc0b7d0-9bf9-41bd-b722-df8e006369c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SoftwareCheck">
+      <UniqueIdentifier>{62ff7d58-6f1e-458f-855d-c49b77b243d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RadarStatus">
+      <UniqueIdentifier>{0f0336ec-437d-4e5f-8e51-0dcd8bde7643}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wx_pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stringresource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXi_gui.h">
+      <Filter>wxFormBuilder Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangXiMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Interface\GuangXi\GuangXi_I.h">
+      <Filter>Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPCheck.h">
+      <Filter>Header Files\FTPCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPBaseDataCheck.h">
+      <Filter>Header Files\FTPCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqldatabase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPProductDataCheck.h">
+      <Filter>Header Files\FTPCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPStateDataCheck.h">
+      <Filter>Header Files\FTPCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmFileCheck.h">
+      <Filter>Header Files\AlarmCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="FileGenerationCheck.h">
+      <Filter>Header Files\FileGenerationCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDataCheck.h">
+      <Filter>Header Files\FileGenerationCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductCheck.h">
+      <Filter>Header Files\FileGenerationCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="ZhuangtaiCheck.h">
+      <Filter>Header Files\FileGenerationCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="Pintucheck.h">
+      <Filter>Header Files\FileGenerationCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftwareCheck.h">
+      <Filter>Header Files\SoftwareCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="IFTPCheck.h">
+      <Filter>Header Files\FTPCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="RadarStatus.h">
+      <Filter>Header Files\RadarStatus</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>Header Files\RadarStatus</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductFileAlarm.h">
+      <Filter>Header Files\AlarmCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="RadarStatusAlarm.h">
+      <Filter>Header Files\AlarmCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="PintuFileAlarm.h">
+      <Filter>Header Files\AlarmCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPFileAlarm.h">
+      <Filter>Header Files\AlarmCheck</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GuangXi.fbp">
+      <Filter>wxFormBuilder Files</Filter>
+    </None>
+    <None Include="doc.txt" />
+    <None Include="version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="GuangXi.exe.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GuangXi.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GuangXiPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangXiMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangXi_gui.cpp">
+      <Filter>wxFormBuilder Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangXiPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangXiSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPCheck.cpp">
+      <Filter>Source Files\FTPCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPBaseDataCheck.cpp">
+      <Filter>Source Files\FTPCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="MysqlDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPProductDataCheck.cpp">
+      <Filter>Source Files\FTPCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPStateDataCheck.cpp">
+      <Filter>Source Files\FTPCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileGenerationCheck.cpp">
+      <Filter>Source Files\FileGenerationCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDataCheck.cpp">
+      <Filter>Source Files\FileGenerationCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductCheck.cpp">
+      <Filter>Source Files\FileGenerationCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="ZhuangtaiCheck.cpp">
+      <Filter>Source Files\FileGenerationCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="Pintucheck.cpp">
+      <Filter>Source Files\FileGenerationCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftwareCheck.cpp">
+      <Filter>Source Files\SoftwareCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="RadarStatus.cpp">
+      <Filter>Source Files\RadarSatus</Filter>
+    </ClCompile>
+    <ClCompile Include="RadarStatusAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductFileAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmFileCheck.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="PintuFileAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPFileAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

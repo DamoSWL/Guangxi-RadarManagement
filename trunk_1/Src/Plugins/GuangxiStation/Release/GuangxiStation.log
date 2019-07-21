@@ -1,0 +1,75 @@
+﻿生成启动时间为 2018/5/3 13:34:07。
+     1>项目“F:\GuangXiStation\Src\Plugins\GuangxiStation\GuangxiStation.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\GuangxiStation.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       PreBuildEvent:
+         Description: 增加编译版本号 . . .
+         ChangeRev /sF:\GuangXiStation\Src\Plugins\GuangxiStation\ /fF:\GuangXiStation\Src\Plugins\GuangxiStation\version.cpp /rF:\GuangXiStation\Src\Plugins\GuangxiStation\GuangxiStation.rc
+         :VCEnd
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\wxWidgets2.8/include /ID:\wxWidgets2.8\additions/include /ID:\wxWidgets2.8/contrib/include /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/interface" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/Include/MYSQL" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/pthread" /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D STRICT /D __WXMSW__ /D __WX__ /D NDEBUG /D _WINDOWS /D TIXML_USE_TICPP /D wxUSE_UNICODE /D WXUSINGDLL /D _CRT_SECURE_NO_DEPRECATE /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx_pch.h" /Fp"Release\/GuangxiStation.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /FIwx_pch.h /FID:\wxWidgets2.8/include/msvc/wx/setup.h /analyze- /errorReport:prompt AirCompressor.cpp InfraRed.cpp Leakage.cpp GuangxiStationMain.cpp GuangxiStationPanel.cpp GuangxiStationPlug.cpp GuangxiStationSet.cpp GuangxiStation_gui.cpp MysqlDatabase.cpp pugixml.cpp SelfDefAnalogDataOne.cpp SelfDefAnalogDataThree.cpp SelfDefAnalogDataTwo.cpp SimAirConditonerController.cpp SinglePhasePower.cpp SixRoute.cpp SwitchData.cpp SystemAnalogData.cpp Temperature.cpp TemperaturePowerAlarm.cpp TemperatureRadarAlarm.cpp ThreePhaseAlarm.cpp ThreePhasePower.cpp UPSAlarm.cpp version.cpp
+         AirCompressor.cpp
+         InfraRed.cpp
+         Leakage.cpp
+         GuangxiStationMain.cpp
+         GuangxiStationPanel.cpp
+         GuangxiStationPlug.cpp
+         GuangxiStationSet.cpp
+         GuangxiStation_gui.cpp
+         MysqlDatabase.cpp
+         pugixml.cpp
+         SelfDefAnalogDataOne.cpp
+         SelfDefAnalogDataThree.cpp
+         SelfDefAnalogDataTwo.cpp
+         SimAirConditonerController.cpp
+         SinglePhasePower.cpp
+         SixRoute.cpp
+         SwitchData.cpp
+         SystemAnalogData.cpp
+         Temperature.cpp
+         TemperaturePowerAlarm.cpp
+         TemperatureRadarAlarm.cpp
+         ThreePhaseAlarm.cpp
+         ThreePhasePower.cpp
+         UPSAlarm.cpp
+         version.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /l"0x0409" /IRelease\ /ID:\wxWidgets2.8/include /nologo /fo"Release\GuangxiStation.res" GuangxiStation.rc 
+       Link:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../../../build/Release/plugin/GuangxiStation\GuangxiStation.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/targetsxs.h" /LIBPATH:D:\wxWidgets2.8/lib/vc_dll /LIBPATH:D:\wxWidgets2.8\additions/lib/vc_dll /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/lib" /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/lib/Release" comctl32.lib rpcrt4.lib winmm.lib wsock32.lib ws2_32.lib iphlpapi.lib LibWRISFramework.lib version.lib libmysql.lib tinyxml++.lib pthreadVC2.lib UDP.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\GuangxiStation.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"F:\GuangXiStation\build\Release\plugin\GuangxiStation\GuangxiStation.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../../../build/Release/plugin/GuangxiStation\GuangxiStation.lib" /MACHINE:X86 /DLL Release\GuangxiStation.res
+         Release\AirCompressor.obj
+         Release\InfraRed.obj
+         Release\Leakage.obj
+         Release\GuangxiStationMain.obj
+         Release\GuangxiStationPanel.obj
+         Release\GuangxiStationPlug.obj
+         Release\GuangxiStationSet.obj
+         Release\GuangxiStation_gui.obj
+         Release\MysqlDatabase.obj
+         Release\pugixml.obj
+         Release\SelfDefAnalogDataOne.obj
+         Release\SelfDefAnalogDataThree.obj
+         Release\SelfDefAnalogDataTwo.obj
+         Release\SimAirConditonerController.obj
+         Release\SinglePhasePower.obj
+         Release\SixRoute.obj
+         Release\SwitchData.obj
+         Release\SystemAnalogData.obj
+         Release\Temperature.obj
+         Release\TemperaturePowerAlarm.obj
+         Release\TemperatureRadarAlarm.obj
+         Release\ThreePhaseAlarm.obj
+         Release\ThreePhasePower.obj
+         Release\UPSAlarm.obj
+         Release\version.obj
+         GuangxiStation.vcxproj -> F:\GuangXiStation\Src\Plugins\GuangxiStation\../../../build/Release/plugin/GuangxiStation\GuangxiStation.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../../../build/Release/plugin/GuangxiStation\GuangxiStation.dll;#2" /manifest GuangxiStation.exe.manifest Release\GuangxiStation.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\GuangxiStation.unsuccessfulbuild”。
+         正在对“Release\GuangxiStation.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\GuangXiStation\Src\Plugins\GuangxiStation\GuangxiStation.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.83

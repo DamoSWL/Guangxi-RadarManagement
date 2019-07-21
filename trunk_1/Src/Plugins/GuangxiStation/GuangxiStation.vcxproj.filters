@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8fa6c6e9-5d20-4815-9a4f-767905fbdac9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b85213ef-36c2-4440-bb12-ea4a7dc0383e}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f6fba266-ed04-4a69-bb9b-fcb0eb12601d}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="wxFormBuilder Files">
+      <UniqueIdentifier>{d01098a8-800b-4055-8ec2-3bbf50f0c8f4}</UniqueIdentifier>
+      <Extensions>fbp</Extensions>
+    </Filter>
+    <Filter Include="Interface Files">
+      <UniqueIdentifier>{0eeadc28-708f-486a-b8e9-367dd748109f}</UniqueIdentifier>
+      <Extensions>h;i</Extensions>
+    </Filter>
+    <Filter Include="Header Files\PowerDetect">
+      <UniqueIdentifier>{5ac85c27-90b3-4a88-b44f-8c3ea1cefbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PowerDetect">
+      <UniqueIdentifier>{4769dedb-7af7-4723-8013-3b647ed53d42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SixRoute">
+      <UniqueIdentifier>{7cc48cee-4920-49e8-ac56-c39679ec566a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SixRoute">
+      <UniqueIdentifier>{cfaa6f42-3233-4487-adce-1f92825b800e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InfraRed">
+      <UniqueIdentifier>{b5fdd0bb-4cdb-454a-a407-c1a65c4ebc19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InfraRed">
+      <UniqueIdentifier>{181d551b-29af-4124-b82a-d30f61f84245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Leakage">
+      <UniqueIdentifier>{66877b57-297a-490d-9643-3e2f053bb143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Leakage">
+      <UniqueIdentifier>{7360b8c1-c4d5-4788-9045-73f4a7f0d715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AirCompressor">
+      <UniqueIdentifier>{61e4fcc9-d16d-4b46-8507-41c53d52dcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCompressor">
+      <UniqueIdentifier>{a7919de7-d4b8-4498-aa4a-e46bad0e557c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Temperature">
+      <UniqueIdentifier>{e74606f5-de17-46a7-a603-8a1613c46c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Temperature">
+      <UniqueIdentifier>{6ab2d9db-acbc-41fd-85fb-562fc4494b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Alarm">
+      <UniqueIdentifier>{ec77c396-9d97-426e-ab13-de76d5fb7698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Alarm">
+      <UniqueIdentifier>{5d5d8ba9-50e4-4ead-a288-bbc9eab1a80e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AirConditioner">
+      <UniqueIdentifier>{8c05d730-fd50-4756-aef2-696c310c9716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirConditioner">
+      <UniqueIdentifier>{4ab3e900-66e3-45c5-a165-b2758fa222c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UPS_EP60+">
+      <UniqueIdentifier>{ccb0e9f4-3893-488f-b8ec-155a79d729c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UPS_Q2">
+      <UniqueIdentifier>{a491e4b7-b072-4ebd-9840-7e158b069077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UPS_Q2">
+      <UniqueIdentifier>{d029ec31-6c5b-483f-bd1a-140e06b89da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UPS_G1">
+      <UniqueIdentifier>{5e5d013f-fd1c-4d4e-b15f-147f9efb6e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UPS_G1">
+      <UniqueIdentifier>{f065b2a3-da64-4f08-8479-e1542fc7a3d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UPS_EP60+">
+      <UniqueIdentifier>{dc05d062-b828-439a-868c-fd2d578161fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UPS_EP60">
+      <UniqueIdentifier>{fbc7e1df-430f-4860-8a94-8a12ad1c58c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UPS_EP60">
+      <UniqueIdentifier>{04844326-e1b3-4481-bdd3-f6f72d0e1e1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wx_pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStationMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stringresource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStation_gui.h">
+      <Filter>wxFormBuilder Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStationToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStationMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStationPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuangxiStationSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqldatabase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreePhasePower.h">
+      <Filter>Header Files\PowerDetect</Filter>
+    </ClInclude>
+    <ClInclude Include="IProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wxipctrl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SixRoute.h">
+      <Filter>Header Files\SixRoute</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglePhasePower.h">
+      <Filter>Header Files\PowerDetect</Filter>
+    </ClInclude>
+    <ClInclude Include="InfraRed.h">
+      <Filter>Header Files\InfraRed</Filter>
+    </ClInclude>
+    <ClInclude Include="Leakage.h">
+      <Filter>Header Files\Leakage</Filter>
+    </ClInclude>
+    <ClInclude Include="AirCompressor.h">
+      <Filter>Header Files\AirCompressor</Filter>
+    </ClInclude>
+    <ClInclude Include="Temperature.h">
+      <Filter>Header Files\Temperature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Interface\GuangxiStation\GuangxiStation_I.h">
+      <Filter>Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TemperatureRadarAlarm.h">
+      <Filter>Header Files\Alarm</Filter>
+    </ClInclude>
+    <ClInclude Include="TemperaturePowerAlarm.h">
+      <Filter>Header Files\Alarm</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreePhaseAlarm.h">
+      <Filter>Header Files\Alarm</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemAnalogData.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfDefAnalogDataOne.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfDefAnalogDataThree.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfDefAnalogDataTwo.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchData.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSAlarm.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="SimAirConditonerController.h">
+      <Filter>Header Files\AirConditioner</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataStructure.h">
+      <Filter>Header Files\UPS_EP60+</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataQ2.h">
+      <Filter>Header Files\UPS_Q2</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataWA.h">
+      <Filter>Header Files\UPS_Q2</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataG1.h">
+      <Filter>Header Files\UPS_G1</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataG2.h">
+      <Filter>Header Files\UPS_G1</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataG3.h">
+      <Filter>Header Files\UPS_G1</Filter>
+    </ClInclude>
+    <ClInclude Include="UPSDataEP60.h">
+      <Filter>Header Files\UPS_EP60</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GuangxiStation.fbp">
+      <Filter>wxFormBuilder Files</Filter>
+    </None>
+    <None Include="doc.txt" />
+    <None Include="version.txt" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="GuangxiStation.exe.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GuangxiStation.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GuangxiStationPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangxiStationMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangxiStation_gui.cpp">
+      <Filter>wxFormBuilder Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangxiStationPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuangxiStationSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MysqlDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreePhasePower.cpp">
+      <Filter>Source Files\PowerDetect</Filter>
+    </ClCompile>
+    <ClCompile Include="SixRoute.cpp">
+      <Filter>Source Files\SixRoute</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglePhasePower.cpp">
+      <Filter>Source Files\PowerDetect</Filter>
+    </ClCompile>
+    <ClCompile Include="InfraRed.cpp">
+      <Filter>Source Files\InfraRed</Filter>
+    </ClCompile>
+    <ClCompile Include="Leakage.cpp">
+      <Filter>Source Files\Leakage</Filter>
+    </ClCompile>
+    <ClCompile Include="AirCompressor.cpp">
+      <Filter>Source Files\AirCompressor</Filter>
+    </ClCompile>
+    <ClCompile Include="Temperature.cpp">
+      <Filter>Source Files\Temperature</Filter>
+    </ClCompile>
+    <ClCompile Include="TemperatureRadarAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="TemperaturePowerAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreePhaseAlarm.cpp">
+      <Filter>Source Files\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemAnalogData.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfDefAnalogDataOne.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfDefAnalogDataThree.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfDefAnalogDataTwo.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchData.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSAlarm.cpp">
+      <Filter>Source Files\UPS_EP60+</Filter>
+    </ClCompile>
+    <ClCompile Include="SimAirConditonerController.cpp">
+      <Filter>Source Files\AirConditioner</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataQ2.cpp">
+      <Filter>Source Files\UPS_Q2</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataWA.cpp">
+      <Filter>Source Files\UPS_Q2</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataG1.cpp">
+      <Filter>Source Files\UPS_G1</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataG2.cpp">
+      <Filter>Source Files\UPS_G1</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataG3.cpp">
+      <Filter>Source Files\UPS_G1</Filter>
+    </ClCompile>
+    <ClCompile Include="UPSDataEP60.cpp">
+      <Filter>Source Files\UPS_EP60</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

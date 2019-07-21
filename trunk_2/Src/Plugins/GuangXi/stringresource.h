@@ -1,0 +1,8 @@
+#ifndef GUANGXISTRING_RESOURCE_H
+#define GUANGXISTRING_RESOURCE_H
+
+#define STR_PLUGIN_NAME g_Name_GuangXi
+
+
+
+#endif

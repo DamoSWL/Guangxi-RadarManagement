@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+	<siteInfo>Z9771</siteInfo>
+	<computersIP RPG="222.18.149.188" PUP="222.18.149.109" PUP2="222.18.149.100" />
+	<database>
+		<hostname>localhost</hostname>
+		<user>root</user>
+		<password>cdyw</password>
+		<databasename>radar_monitor_db_20180226</databasename>
+	</database>
+</config>

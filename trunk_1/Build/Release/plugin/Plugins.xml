@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<Plugins path="">
+    <Plugin index="0">
+        <name>GuangxiStation</name>
+        <guid>{16BD8B65-8D31-4EB0-B2A8-5C975DCF36E5}</guid>
+        <model>GuangxiStation.dll</model>
+        <path></path>
+        <active>1</active>
+    </Plugin>
+</Plugins>

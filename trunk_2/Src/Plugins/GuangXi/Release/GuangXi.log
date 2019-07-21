@@ -1,0 +1,71 @@
+﻿生成启动时间为 2018/5/5 11:50:07。
+     1>项目“F:\GuangXi_Server\Src\Plugins\GuangXi\GuangXi.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\GuangXi.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       PreBuildEvent:
+         Description: 增加编译版本号 . . .
+         ChangeRev /sF:\GuangXi_Server\Src\Plugins\GuangXi\ /fF:\GuangXi_Server\Src\Plugins\GuangXi\version.cpp /rF:\GuangXi_Server\Src\Plugins\GuangXi\GuangXi.rc
+         :VCEnd
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\wxWidgets2.8/include /ID:\wxWidgets2.8\additions/include /ID:\wxWidgets2.8/contrib/include /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/interface" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/Include\MYSQL" /I"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/pthread" /nologo /W3 /WX- /O1 /Oy- /D WIN32 /D STRICT /D __WXMSW__ /D __WX__ /D NDEBUG /D _WINDOWS /D TIXML_USE_TICPP /D wxUSE_UNICODE /D WXUSINGDLL /D _CRT_SECURE_NO_DEPRECATE /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx_pch.h" /Fp"Release\/GuangXi.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /FIwx_pch.h /FID:\wxWidgets2.8/include/msvc/wx/setup.h /analyze- /errorReport:prompt AlarmFileCheck.cpp BaseDataCheck.cpp FTPBaseDataCheck.cpp FTPCheck.cpp FTPFileAlarm.cpp FTPProductDataCheck.cpp FTPStateDataCheck.cpp FileGenerationCheck.cpp GuangXiMain.cpp GuangXiPanel.cpp GuangXiPlug.cpp GuangXiSet.cpp GuangXi_gui.cpp MysqlDatabase.cpp PintuFileAlarm.cpp Pintucheck.cpp ProductCheck.cpp ProductFileAlarm.cpp RadarStatus.cpp RadarStatusAlarm.cpp SoftwareCheck.cpp ZhuangtaiCheck.cpp
+         AlarmFileCheck.cpp
+         BaseDataCheck.cpp
+         FTPBaseDataCheck.cpp
+         FTPCheck.cpp
+         FTPFileAlarm.cpp
+         FTPProductDataCheck.cpp
+         FTPStateDataCheck.cpp
+         FileGenerationCheck.cpp
+         GuangXiMain.cpp
+         GuangXiPanel.cpp
+         GuangXiPlug.cpp
+         GuangXiSet.cpp
+         GuangXi_gui.cpp
+         MysqlDatabase.cpp
+         PintuFileAlarm.cpp
+         Pintucheck.cpp
+         ProductCheck.cpp
+         ProductFileAlarm.cpp
+         RadarStatus.cpp
+         RadarStatusAlarm.cpp
+         SoftwareCheck.cpp
+         ZhuangtaiCheck.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../../../build/Release/plugin/GuangXi\GuangXi.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/include/targetsxs.h" /LIBPATH:D:\wxWidgets2.8/lib/vc_dll /LIBPATH:D:\wxWidgets2.8\additions/lib/vc_dll /LIBPATH:"F:\WRIS-WRSOC-SERVER\WRSOC_Server\Src/lib/Release" comctl32.lib rpcrt4.lib winmm.lib wsock32.lib LibWRISFramework.lib version.lib tinyxml++.lib pthreadVC2.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\GuangXi.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"F:\GuangXi_Server\build\Release\plugin\GuangXi\GuangXi.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../../../build/Release/plugin/GuangXi\GuangXi.lib" /MACHINE:X86 /DLL Release\GuangXi.res
+         Release\AlarmFileCheck.obj
+         Release\BaseDataCheck.obj
+         Release\FileGenerationCheck.obj
+         Release\FTPBaseDataCheck.obj
+         Release\FTPCheck.obj
+         Release\FTPFileAlarm.obj
+         Release\FTPProductDataCheck.obj
+         Release\FTPStateDataCheck.obj
+         Release\GuangXiMain.obj
+         Release\GuangXiPanel.obj
+         Release\GuangXiPlug.obj
+         Release\GuangXiSet.obj
+         Release\GuangXi_gui.obj
+         Release\MysqlDatabase.obj
+         Release\Pintucheck.obj
+         Release\PintuFileAlarm.obj
+         Release\ProductCheck.obj
+         Release\ProductFileAlarm.obj
+         Release\pugixml.obj
+         Release\RadarStatus.obj
+         Release\RadarStatusAlarm.obj
+         Release\SoftwareCheck.obj
+         Release\version.obj
+         Release\ZhuangtaiCheck.obj
+         GuangXi.vcxproj -> F:\GuangXi_Server\Src\Plugins\GuangXi\../../../build/Release/plugin/GuangXi\GuangXi.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../../../build/Release/plugin/GuangXi\GuangXi.dll;#2" /manifest GuangXi.exe.manifest Release\GuangXi.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\GuangXi.unsuccessfulbuild”。
+         正在对“Release\GuangXi.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\GuangXi_Server\Src\Plugins\GuangXi\GuangXi.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.65
